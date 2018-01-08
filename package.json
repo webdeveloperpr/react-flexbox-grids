@@ -15,7 +15,8 @@
     "docker:prod": "docker run --name react-flexbox-grids -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/react-flexbox-grids",
     "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod",
     "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js",
-    "deploy": "gh-pages -d docs",
+    "gh:deploy": "gh-pages -d docs",
+    "gh:build": "npm run build",
     "prepare": "npm run npm:build",
     "release": "np"
   },

@@ -16,13 +16,10 @@ const {
 } = constants;
 
 const config = {
-  entry: {
-    vendors: VENDOR_LIBS,
-    bundle: ENTRY_FILE,
-  },
+  entry: VENDOR_LIBS,
   output: {
     path: DIST_DIR,
-    filename: '[name].[chunkhash].js',
+    filename: 'bundle.js',
     publicPath: '/'
   },
   module: {
@@ -35,7 +32,6 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(['dist', 'docs']),
     new HtmlWebpackPlugin({ template: TEMPLATE_FILE }),
-    new webpack.optimize.CommonsChunkPlugin({ names: ['vendors', 'manifest'] }),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }),
     css.extract
   ]
