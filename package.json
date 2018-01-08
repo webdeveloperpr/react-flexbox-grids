@@ -53,7 +53,9 @@
     "docker:build": "docker build -t webdeveloperpr/webpack-config .",
     "docker:prod": "docker run --name webpack-config -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/webpack-config",
     "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod",
-    "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js"
+    "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js",
+    "prepare": "npm run npm:build",
+    "release": "np"
   },
   "repository": {
     "type": "git",
