@@ -33,7 +33,7 @@ const config = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist', 'docs']),
     new HtmlWebpackPlugin({ template: TEMPLATE_FILE }),
     new webpack.optimize.CommonsChunkPlugin({ names: ['vendors', 'manifest'] }),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }),

@@ -3,6 +3,22 @@
   "version": "1.0.6",
   "description": "flexbox grids for react",
   "main": "npm/dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "NODE_ENV=development nodemon ./server/index.js --watch ./server",
+    "prod": "NODE_ENV=production PORT=80 npm run build && node ./server/index.js",
+    "build": "NODE_ENV=production webpack -p --config ./config/webpack.prod.js",
+    "docker:remove": "docker rm /react-flexbox-grids",
+    "docker:build": "docker build -t webdeveloperpr/react-flexbox-grids .",
+    "docker:prod": "docker run --name react-flexbox-grids -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/react-flexbox-grids",
+    "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod",
+    "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js",
+    "deploy": "gh-pages -d docs",
+    "prepare": "npm run npm:build",
+    "release": "np"
+  },
   "dependencies": {
     "classnames": "2.2.5",
     "flexboxgrid": "6.3.1",
@@ -21,7 +37,6 @@
     "babel-polyfill": "6.26.0",
     "clean-webpack-plugin": "0.1.17",
     "css-loader": "0.28.7",
-    "deploy": "npm run build:prod && gh-pages -d docs",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "express": "4.16.2",
@@ -42,22 +57,6 @@
     "webpack": "3.9.1",
     "webpack-dev-middleware": "1.12.2",
     "webpack-hot-middleware": "2.21.0"
-  },
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "dev": "NODE_ENV=development nodemon ./server/index.js --watch ./server",
-    "prod": "NODE_ENV=production PORT=80 npm run build && node ./server/index.js",
-    "build": "NODE_ENV=production webpack -p --config ./config/webpack.prod.js",
-    "docker:remove": "docker rm /react-flexbox-grids",
-    "docker:build": "docker build -t webdeveloperpr/react-flexbox-grids .",
-    "docker:prod": "docker run --name react-flexbox-grids -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/react-flexbox-grids",
-    "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod",
-    "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js",
-    "deploy": "npm run build && gh-pages -d docs",
-    "prepare": "npm run npm:build",
-    "release": "np && npm run deploy"
   },
   "repository": {
     "type": "git",
