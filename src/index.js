@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/styles.scss';
-import { Col, Row, Container } from './components/Grid/index';
+import '../npm/dist/styles.css';
+import { Col, Row, Container } from '../npm/dist';
 
 const App = () => {
   return (

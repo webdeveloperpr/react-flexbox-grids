@@ -2,8 +2,12 @@
   "name": "react-flexbox-grids",
   "version": "1.0.0",
   "description": "flexbox grids for react",
-  "main": "npm/dist",
+  "main": "npm/dist/index.js",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
   "dependencies": {
+    "react": "16.2.0",
     "classnames": "2.2.5",
     "prop-types": "15.6.0",
     "flexboxgrid": "6.3.1"
@@ -48,7 +52,8 @@
     "docker:remove": "docker rm /webpack-config",
     "docker:build": "docker build -t webdeveloperpr/webpack-config .",
     "docker:prod": "docker run --name webpack-config -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/webpack-config",
-    "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod"
+    "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod",
+    "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js"
   },
   "repository": {
     "type": "git",
