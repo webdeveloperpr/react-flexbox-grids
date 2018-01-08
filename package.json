@@ -3,20 +3,18 @@
   "version": "1.0.0",
   "description": "flexbox grids for react",
   "main": "npm/dist/index.js",
-  "peerDependencies": {
-    "react": "^15.5.4"
-  },
   "dependencies": {
-    "react": "16.2.0",
     "classnames": "2.2.5",
+    "flexboxgrid": "6.3.1",
     "prop-types": "15.6.0",
-    "flexboxgrid": "6.3.1"
+    "react": "16.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.34",
     "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.36",
     "@babel/preset-env": "7.0.0-beta.34",
     "@babel/preset-react": "7.0.0-beta.34",
+    "babel-core": "7.0.0-bridge.0",
     "babel-jest": "22.0.4",
     "babel-loader": "8.0.0-beta.0",
     "babel-polyfill": "6.26.0",
@@ -38,8 +36,8 @@
     "regenerator-runtime": "0.11.1",
     "sass-loader": "6.0.6",
     "style-loader": "0.19.0",
-    "webpack-dev-middleware": "1.12.2",
     "webpack": "3.9.1",
+    "webpack-dev-middleware": "1.12.2",
     "webpack-hot-middleware": "2.21.0"
   },
   "scripts": {

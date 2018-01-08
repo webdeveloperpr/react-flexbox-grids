@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/styles.scss';
 import '../npm/dist/styles.css';
-
-import { Col, Row, Container } from '../npm/dist';
+import {
+  Col,
+  Row,
+  Container
+} from '../src/components/Grid';
 
 const App = () => {
   return (
