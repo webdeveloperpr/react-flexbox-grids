@@ -1,6 +1,6 @@
 const path = require('path');
 
-const DIST_DIR = path.join(__dirname, '../dist');
+const DIST_DIR = path.join(__dirname, '../docs');
 const ENTRY_FILE = path.join(__dirname, '../src/index.js');
 const TEMPLATES_DIR = path.join(__dirname, 'templates');
 const DIST_DIR_INDEX_FILE = path.join(DIST_DIR, 'index.html');
