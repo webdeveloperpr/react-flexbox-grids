@@ -4,6 +4,8 @@ import {
   createColClassNames,
   createOffsetClassNames,
   createClassNames,
+  createOrderClassName,
+  createOrderClassNames,
 } from './utils';
 
 describe('createColClassName', () => {
@@ -55,5 +57,16 @@ describe('createClassNames', () => {
       'col-xs-10',
       'col-xs-offset-6',
     ])
+  });
+});
+
+describe('createOrderClassName', () => {
+  test('should create a classname', () => {
+    const result = createOrderClassNames({
+      firstXs: true,
+      lastXs: false,
+    });
+
+    expect(result).toEqual(['first-xs']);
   });
 });

@@ -1,5 +1,6 @@
 import { oneToTwelveRegex, zeroToTwelveRegex } from '../../utils/regex';
-import { sizes, offsets } from '../../utils/constants';
+import { sizes, offsets, order } from '../../utils/constants';
+import { toKebabLowerCased, uppercase } from '../Row/utils';
 
 export const createColClassName = (mediaSize, colSize) => `col-${mediaSize}-${colSize}`;
 
@@ -25,8 +26,23 @@ export const createOffsetClassNames = props => {
   }, []);
 };
 
-// TODO: [] Add orderClassNames
+export const createOrderClassName = (prop, colSize) => `${prop}-${colSize}`;
+
+const orderPropWithSizes = sizes.reduce((acc, size) => [...acc, ...order.map(
+  order => order + uppercase(size))], []);
+
+export const createOrderClassNames = props => {
+  return Object
+    .keys(props)
+    .reduce((acc, val) => {
+      return !!orderPropWithSizes.find(x => x === val && props[x] === true)
+        ? [...acc, toKebabLowerCased(val)]
+        : acc
+    }, []);
+};
+
 export const createClassNames = props => [
   createColClassNames,
   createOffsetClassNames,
+  createOrderClassNames,
 ].reduce((acc, fn) => [...acc, ...fn(props)], []);

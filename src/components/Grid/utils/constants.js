@@ -26,3 +26,8 @@ export const rowProperties = [
   'first',
   'last',
 ];
+
+export const order = [
+  'first',
+  'last'
+];

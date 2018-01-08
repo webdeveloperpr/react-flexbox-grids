@@ -270,6 +270,35 @@ const App = () => {
             </Row>
           </Col>
         </Row>
+        <Row>
+          <Col xs={12}>
+            <h3>.first and .last</h3>
+          </Col>
+        </Row>
+        <Row className="blue-grid">
+          <Col xs={12}>
+            <Row betweenXs>
+              <Col xs={3} lastXs>Col 1</Col>
+              <Col xs={3}>Col 2</Col>
+              <Col xs={3} firstXs>Col 3</Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12}>
+            <h3>.reverse</h3>
+          </Col>
+        </Row>
+        <Row className="blue-grid">
+          <Col xs={12}>
+            <Row reverse>
+              <Col xs={3}>Col 1</Col>
+              <Col xs={3}>Col 2</Col>
+              <Col xs={3}>Col 3</Col>
+              <Col xs={3}>Col 4</Col>
+            </Row>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
