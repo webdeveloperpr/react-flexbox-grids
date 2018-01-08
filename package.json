@@ -1,5 +1,5 @@
 {
-  "name": "react-flexbox-grids",
+  "name": "_react-flexbox-grids",
   "version": "1.0.2",
   "description": "flexbox grids for react",
   "main": "npm/dist/index.js",
@@ -7,7 +7,8 @@
     "classnames": "2.2.5",
     "flexboxgrid": "6.3.1",
     "prop-types": "15.6.0",
-    "react": "16.2.0"
+    "react": "16.2.0",
+    "react-flexbox-grids": "1.0.2"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.34",

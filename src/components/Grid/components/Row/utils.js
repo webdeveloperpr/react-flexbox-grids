@@ -2,7 +2,7 @@ import { uppercaseRegex } from '../../utils/regex';
 import { sizes, rowProperties } from '../../utils/constants';
 
 const nonUppercasedProps = [
-  'reverse'
+  'reverse',
 ];
 
 export const uppercase = x => x
