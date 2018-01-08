@@ -1,0 +1,58 @@
+{
+  "name": "react-flexbox-grids",
+  "version": "1.0.0",
+  "description": "flexbox grids for react",
+  "main": "npm/dist",
+  "dependencies": {
+    "classnames": "2.2.5",
+    "prop-types": "15.6.0",
+    "flexboxgrid": "6.3.1"
+  },
+  "devDependencies": {
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "22.0.4",
+    "babel-loader": "8.0.0-beta.0",
+    "babel-polyfill": "6.26.0",
+    "clean-webpack-plugin": "0.1.17",
+    "css-loader": "0.28.7",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "express": "4.16.2",
+    "extract-text-webpack-plugin": "3.0.2",
+    "filter-react-dom-props": "0.0.2",
+    "html-webpack-plugin": "2.30.1",
+    "image-webpack-loader": "3.4.2",
+    "jest": "22.0.4",
+    "node-sass": "4.7.2",
+    "nodemon": "1.12.1",
+    "np": "2.18.3",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "regenerator-runtime": "0.11.1",
+    "sass-loader": "6.0.6",
+    "style-loader": "0.19.0",
+    "webpack-dev-middleware": "1.12.2",
+    "webpack": "3.9.1",
+    "webpack-hot-middleware": "2.21.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdeveloperpr/webpack-config.git"
+  },
+  "keywords": [
+    "flexbox",
+    "react",
+    "grids",
+    "column",
+    "row"
+  ],
+  "author": "Luis Betancourt <webdeveloperpr@gmail.com> (https://github.com/webdeveloperpr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webdeveloperpr/webpack-config/issues"
+  },
+  "homepage": "https://github.com/webdeveloperpr/webpack-config#readme"
+}

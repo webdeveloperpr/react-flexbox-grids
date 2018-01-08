@@ -1,0 +1,38 @@
+const path = require('path');
+
+const DIST_DIR = path.join(__dirname, '../dist');
+const ENTRY_FILE = path.join(__dirname, '../src/index.js');
+const TEMPLATES_DIR = path.join(__dirname, 'templates');
+const DIST_DIR_INDEX_FILE = path.join(DIST_DIR, 'index.html');
+
+const NPM_DIST_DIR = path.join(__dirname, '../npm/dist');
+const NPM_ENTRY_FILE = path.join(__dirname, '../src/components/Grid/index.js');
+
+// templates
+const TEMPLATE_FILE = path.join(TEMPLATES_DIR, 'template.html');
+
+// prod
+const VENDOR_LIBS = [
+  'babel-polyfill',
+  'react',
+  'react-dom',
+];
+
+// express
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || 'localhost';
+
+module.exports = {
+  ENTRY_FILE,
+  VENDOR_LIBS,
+  // templates
+  TEMPLATE_FILE,
+  // dist
+  DIST_DIR,
+  DIST_DIR_INDEX_FILE,
+  // express
+  PORT,
+  HOST,
+  NPM_DIST_DIR,
+  NPM_ENTRY_FILE,
+};
