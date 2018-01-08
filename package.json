@@ -50,13 +50,14 @@
     "dev": "NODE_ENV=development nodemon ./server/index.js --watch ./server",
     "prod": "NODE_ENV=production PORT=80 npm run build && node ./server/index.js",
     "build": "NODE_ENV=production webpack -p --config ./config/webpack.prod.js",
-    "docker:remove": "docker rm /webpack-config",
-    "docker:build": "docker build -t webdeveloperpr/webpack-config .",
-    "docker:prod": "docker run --name webpack-config -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/webpack-config",
+    "docker:remove": "docker rm /react-flexbox-grids",
+    "docker:build": "docker build -t webdeveloperpr/react-flexbox-grids .",
+    "docker:prod": "docker run --name react-flexbox-grids -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/react-flexbox-grids",
     "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod",
     "npm:build": "NODE_ENV=production webpack -p --config config/webpack.npm.js",
+    "deploy": "npm run build && gh-pages -d docs",
     "prepare": "npm run npm:build",
-    "release": "np"
+    "release": "np && npm run deploy"
   },
   "repository": {
     "type": "git",
@@ -72,7 +73,7 @@
   "author": "Luis Betancourt <webdeveloperpr@gmail.com> (https://github.com/webdeveloperpr)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webdeveloperpr/webpack-config/issues"
+    "url": "https://github.com/webdeveloperpr/react-flexbox-grids/issues"
   },
-  "homepage": "https://github.com/webdeveloperpr/webpack-config#readme"
+  "homepage": "webdeveloperpr.github.io/react-flexbox-grids"
 }
