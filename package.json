@@ -1,5 +1,5 @@
 {
-  "name": "_react-flexbox-grids",
+  "name": "react-flexbox-grids",
   "version": "1.0.4",
   "description": "flexbox grids for react",
   "main": "npm/dist/index.js",
