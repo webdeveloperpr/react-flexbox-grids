@@ -1,0 +1,7 @@
+.idea
+/config/
+/node_modules/
+/Dockerfile
+/src/
+/server/
+/.babelrc

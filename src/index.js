@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/styles.scss';
-import '../npm/dist/styles.css';
+import 'react-flexbox-grids/npm/dist/styles.css'
 import {
   Col,
   Row,
   Container
-} from '../src/components/Grid';
+} from 'react-flexbox-grids';
 
 const App = () => {
   return (
