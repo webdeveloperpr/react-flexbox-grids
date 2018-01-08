@@ -41,7 +41,7 @@
     "webpack-hot-middleware": "2.21.0"
   },
   "scripts": {
-    "test": "jest test",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "dev": "NODE_ENV=development nodemon ./server/index.js --watch ./server",
