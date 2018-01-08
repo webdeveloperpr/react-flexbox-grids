@@ -9,7 +9,10 @@
     "flexboxgrid": "6.3.1"
   },
   "devDependencies": {
-    "babel-core": "7.0.0-bridge.0",
+    "@babel/core": "7.0.0-beta.34",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.36",
+    "@babel/preset-env": "7.0.0-beta.34",
+    "@babel/preset-react": "7.0.0-beta.34",
     "babel-jest": "22.0.4",
     "babel-loader": "8.0.0-beta.0",
     "babel-polyfill": "6.26.0",
@@ -36,11 +39,20 @@
     "webpack-hot-middleware": "2.21.0"
   },
   "scripts": {
-    "test": "test"
+    "test": "jest test",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "NODE_ENV=development nodemon ./server/index.js --watch ./server",
+    "prod": "NODE_ENV=production PORT=80 npm run build && node ./server/index.js",
+    "build": "NODE_ENV=production webpack -p --config ./config/webpack.prod.js",
+    "docker:remove": "docker rm /webpack-config",
+    "docker:build": "docker build -t webdeveloperpr/webpack-config .",
+    "docker:prod": "docker run --name webpack-config -p 80:80 -e NODE_ENV=production -e PORT=80 webdeveloperpr/webpack-config",
+    "docker:build:prod": "npm run docker:remove & npm run docker:build &&  npm run docker:prod"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdeveloperpr/webpack-config.git"
+    "url": "git+https://github.com/webdeveloperpr/react-flexbox-grids.git"
   },
   "keywords": [
     "flexbox",
