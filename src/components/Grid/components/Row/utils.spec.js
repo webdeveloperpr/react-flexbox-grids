@@ -1,6 +1,6 @@
 import {
   uppercase,
-  toKebabLowerCased,
+  toKebab,
   createRowClassNames,
 } from './utils';
 
@@ -13,7 +13,7 @@ describe('uppercase', () => {
 
 describe('kebabLowerCased', () => {
   test('should convert uppercased words to kebab lowercased', () => {
-    const result = toKebabLowerCased('offsetSm');
+    const result = toKebab('offsetSm');
     expect(result).toBe('offset-sm');
   });
 });
@@ -22,13 +22,13 @@ describe('createRowClassNames', () => {
   test('should create row classnames', () => {
     const props = {
       invalidProp: true,
-      startSm: true,
+      xsCenter: true,
       reverse: false,
     };
 
     const result = createRowClassNames(props);
     expect(result).toEqual({
-      'start-sm': true,
+      'center-xs': true,
     });
   });
 });

@@ -10,12 +10,20 @@ export const uppercase = x => x
   .toUpperCase() + x.slice(1);
 
 export const rowPropTypes = sizes
-  .reduce((acc, x) => [...acc, ...rowProperties.map(y => y + uppercase(x))], [])
+  .reduce((acc, size) => [...acc, ...rowProperties.map(
+    prop => size + uppercase(prop))], [])
   .concat(nonUppercasedProps);
 
-export const toKebabLowerCased = x => x
+export const toKebab = x => x
   .replace(uppercaseRegex, match => `-${match}`)
   .toLowerCase();
+
+export const createRowClassName = prop => {
+  return toKebab(prop)
+    .split('-')
+    .reverse()
+    .join('-');
+};
 
 export const createRowClassNames = props => {
   return Object
@@ -23,7 +31,7 @@ export const createRowClassNames = props => {
     .concat(nonUppercasedProps)
     .reduce((acc, propName) => !!rowPropTypes.find(
       x => x === propName && props[propName] === true)
-      ? { ...acc, ...{ [toKebabLowerCased(propName)]: true } }
+      ? { ...acc, ...{ [createRowClassName(propName)]: true } }
       : acc,
       {});
 };
