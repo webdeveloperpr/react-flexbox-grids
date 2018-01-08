@@ -29,14 +29,14 @@ export const createOffsetClassNames = props => {
 export const createOrderClassName = (prop, colSize) => `${prop}-${colSize}`;
 
 const orderPropWithSizes = sizes.reduce((acc, size) => [...acc, ...order.map(
-  order => order + uppercase(size))], []);
+  order => size + uppercase(order))], []);
 
 export const createOrderClassNames = props => {
   return Object
     .keys(props)
     .reduce((acc, val) => {
       return !!orderPropWithSizes.find(x => x === val && props[x] === true)
-        ? [...acc, toKebab(val)]
+        ? [...acc, toKebab(val).split('-').reverse().join('-')]
         : acc
     }, []);
 };

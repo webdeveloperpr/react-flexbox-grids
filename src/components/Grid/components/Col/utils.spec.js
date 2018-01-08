@@ -63,8 +63,7 @@ describe('createClassNames', () => {
 describe('createOrderClassName', () => {
   test('should create a classname', () => {
     const result = createOrderClassNames({
-      firstXs: true,
-      lastXs: false,
+      xsFirst: true,
     });
 
     expect(result).toEqual(['first-xs']);
