@@ -1,6 +1,6 @@
 {
   "name": "react-flexbox-grids",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "flexbox grids for react",
   "main": "npm/dist/index.js",
   "dependencies": {
