@@ -19,7 +19,6 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(['npm/dist']),
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify(process.env.NODE_ENV) } }),
-    css.extract
   ],
   externals: {
     'react': 'commonjs react', // this line is just to use the React dependency of our parent-testing-project instead of using our own React.

@@ -5,7 +5,7 @@ const ENTRY_FILE = path.join(__dirname, '../src/index.js');
 const TEMPLATES_DIR = path.join(__dirname, 'templates');
 const DIST_DIR_INDEX_FILE = path.join(DIST_DIR, 'index.html');
 
-const NPM_DIST_DIR = path.join(__dirname, '../npm/dist');
+const NPM_DIST_DIR = path.join(__dirname, '../dist');
 const NPM_ENTRY_FILE = path.join(__dirname, '../src/components/Grid/index.js');
 
 // templates
