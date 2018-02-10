@@ -19,7 +19,7 @@ const VENDOR_LIBS = [
 ];
 
 // express
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || 'localhost';
 
 module.exports = {
