@@ -12,8 +12,8 @@ const App = () => {
   return (
     <div>
       <Container>
-        <Row>
-          <Col xs={12}>
+        <Row element="section">
+          <Col element="section" xs={12}>
             <h2>Offsets</h2>
           </Col>
         </Row>

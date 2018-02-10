@@ -11,15 +11,21 @@ const Col = props => {
     reverse: props.reverse
   };
   const classNames = classnames(columnClassNames, otherClassNames, props.className);
+  const Element = props.element;
 
   return (
-    <div{...filterProps(props)} className={classNames}>
+    <Element {...filterProps(props)} className={classNames}>
       {props.children}
-    </div>
+    </Element>
   )
 };
 
+Col.defaultProps = {
+  element: 'div',
+};
+
 Col.propTypes = {
+  element: PropTypes.string,
   first: PropTypes.bool,
   last: PropTypes.bool,
   xs: columnPropType,

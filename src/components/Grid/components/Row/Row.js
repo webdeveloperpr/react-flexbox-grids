@@ -7,15 +7,20 @@ import { createRowClassNames } from './utils';
 
 const Row = props => {
   const classNames = classnames('row', createRowClassNames(props), props.className);
-
+  const Element = props.element;
   return (
-    <div {...filterProps(props)} className={classNames}>
+    <Element {...filterProps(props)} className={classNames}>
       {props.children}
-    </div>
+    </Element>
   )
 };
 
+Row.defaultProps = {
+  element: 'div',
+};
+
 Row.proptypes = {
+  element: PropTypes.string,
   ...rowPropTypes.reduce(prop => ({ [prop]: PropTypes.number })),
 };
 
