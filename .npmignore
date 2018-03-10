@@ -1,0 +1,6 @@
+.idea
+/config/
+/node_modules/
+/src/
+/server/
+/.babelrc
