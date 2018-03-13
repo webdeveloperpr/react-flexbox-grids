@@ -1,4 +1,0 @@
-describe('Col', () => {
-  test('Column', () => {
-  });
-});

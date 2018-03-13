@@ -4,20 +4,15 @@ import classnames from 'classnames';
 import filterProps from 'filter-react-dom-props';
 import { columnPropType } from '../../propTypes/index';
 import { createClassNames } from './utils';
-import { createUtilityClassNames } from '../Row/utils';
+import { utilityPropToClassName } from '../../utils';
 
 const Col = props => {
   const columnClassNames = createClassNames(props);
-  const utilityClassNames = createUtilityClassNames(props);
-
-  const otherClassNames = {
-    reverse: props.reverse
-  };
+  const utilityClassNames = utilityPropToClassName(props);
 
   const classNames = classnames(
     columnClassNames,
     utilityClassNames,
-    otherClassNames,
     props.className
   );
 

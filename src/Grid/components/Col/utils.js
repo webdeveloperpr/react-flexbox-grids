@@ -1,6 +1,9 @@
-import { oneToTwelveRegex, zeroToTwelveRegex } from '../../utils/regex';
-import { sizes, offsets, order } from '../../utils/constants';
-import { toKebab, uppercase } from '../Row/utils';
+import {
+  oneToTwelveRegex,
+  zeroToTwelveRegex,
+  zeroToElevenRegex
+} from '../../utils/regex';
+import { sizes, offsets } from '../../utils/constants';
 
 export const createColClassName = (mediaSize, colSize) => `col-${mediaSize}-${colSize}`;
 
@@ -20,29 +23,13 @@ export const createColClassNames = props => {
 
 export const createOffsetClassNames = props => {
   return offsets.reduce((acc, val) => {
-    return zeroToTwelveRegex.test(props[val])
+    return zeroToElevenRegex.test(props[val])
       ? acc.concat(createOffsetClassName(val, props[val]))
       : acc
   }, []);
 };
 
-export const createOrderClassName = (prop, colSize) => `${prop}-${colSize}`;
-
-const orderPropWithSizes = sizes.reduce((acc, size) => [...acc, ...order.map(
-  order => size + uppercase(order))], []);
-
-export const createOrderClassNames = props => {
-  return Object
-    .keys(props)
-    .reduce((acc, val) => {
-      return !!orderPropWithSizes.find(x => x === val && props[x] === true)
-        ? [...acc, toKebab(val).split('-').reverse().join('-')]
-        : acc
-    }, []);
-};
-
 export const createClassNames = props => [
   createColClassNames,
   createOffsetClassNames,
-  createOrderClassNames,
 ].reduce((acc, fn) => [...acc, ...fn(props)], []);
