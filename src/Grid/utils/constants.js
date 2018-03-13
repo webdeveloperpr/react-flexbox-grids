@@ -14,19 +14,6 @@ export const offsets = [
   'lgOffset',
 ];
 
-export const rowProperties = [
-  'start',
-  'center',
-  'end',
-  'top',
-  'middle',
-  'bottom',
-  'around',
-  'between',
-  'first',
-  'last',
-];
-
 export const order = [
   'first',
   'last'
