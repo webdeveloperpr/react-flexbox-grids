@@ -1,5 +1,6 @@
 const path = require('path');
 
+const ROOT_DIR = path.join(__dirname, '../');
 // github deployment
 const DIST_DIR = path.join(__dirname, '../docs');
 const ENTRY_FILE = path.join(__dirname, '../index.js');
@@ -25,6 +26,7 @@ const PORT = process.env.PORT || 3001;
 const HOST = process.env.HOST || 'localhost';
 
 module.exports = {
+  ROOT_DIR,
   ENTRY_FILE,
   VENDOR_LIBS,
   // templates

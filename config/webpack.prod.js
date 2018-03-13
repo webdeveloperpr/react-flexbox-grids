@@ -11,6 +11,7 @@ const constants = require('./constants');
 const {
   ENV_VARS,
   DIST_DIR,
+  ROOT_DIR,
   ENTRY_FILE,
   VENDOR_LIBS,
   TEMPLATE_FILE,
@@ -34,7 +35,9 @@ const config = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['docs'], {
+      root: ROOT_DIR,
+    }),
     new HtmlWebpackPlugin({ template: TEMPLATE_FILE }),
     new webpack.optimize.CommonsChunkPlugin({ names: ['vendors', 'manifest'] }),
     new webpack.DefinePlugin({
