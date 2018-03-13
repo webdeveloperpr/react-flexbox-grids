@@ -14,7 +14,14 @@ describe('Col is rendered', () => {
   });
 });
 
-describe('Should render the utility classNames', () => {
+describe('should change the element tag', () => {
+  test('should find a form tag', () => {
+    const wrapper = mount(<Col element="form" />);
+    expect(wrapper.find('form').length).toEqual(1);
+  });
+});
+
+describe('should render the utility classNames', () => {
   Object
     .keys(utilityMap)
     .forEach(prop => {
