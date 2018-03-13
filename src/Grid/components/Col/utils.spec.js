@@ -4,9 +4,8 @@ import {
   createColClassNames,
   createOffsetClassNames,
   createClassNames,
-  createOrderClassName,
-  createOrderClassNames,
 } from './utils';
+
 
 describe('createColClassName', () => {
   test('should create column classnames', () => {
@@ -20,10 +19,10 @@ describe('createColClassNames', () => {
     const props = { xs: 3, sm: 10, md: 4, lg: 10 };
     const result = createColClassNames(props);
     expect(result).toEqual([
-      "col-xs-3",
-      "col-sm-10",
-      "col-md-4",
-      "col-lg-10"
+      'col-xs-3',
+      'col-sm-10',
+      'col-md-4',
+      'col-lg-10'
     ]);
   });
 });
@@ -57,15 +56,5 @@ describe('createClassNames', () => {
       'col-xs-10',
       'col-xs-offset-6',
     ])
-  });
-});
-
-describe('createOrderClassName', () => {
-  test('should create a classname', () => {
-    const result = createOrderClassNames({
-      xsFirst: true,
-    });
-
-    expect(result).toEqual(['first-xs']);
   });
 });

@@ -1,7 +1,6 @@
 import {
   oneToTwelveRegex,
-  zeroToTwelveRegex,
-  zeroToElevenRegex
+  oneToElevenRegex,
 } from '../../utils/regex';
 import { sizes, offsets } from '../../utils/constants';
 
@@ -23,7 +22,7 @@ export const createColClassNames = props => {
 
 export const createOffsetClassNames = props => {
   return offsets.reduce((acc, val) => {
-    return zeroToElevenRegex.test(props[val])
+    return oneToElevenRegex.test(props[val])
       ? acc.concat(createOffsetClassName(val, props[val]))
       : acc
   }, []);
