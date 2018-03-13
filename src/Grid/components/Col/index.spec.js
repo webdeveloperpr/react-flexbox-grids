@@ -33,8 +33,6 @@ describe('<Col/>', () => {
               Hello
             </Col>
           );
-          console.log('className', className);
-          console.log('html', wrapper.html());
           expect(wrapper.find('div').hasClass(className)).toBe(true);
         });
       })
@@ -55,7 +53,15 @@ describe('<Col/>', () => {
               expect(wrapper.find('div').hasClass(className)).toEqual(true);
             });
           })
-      })
+      });
+
+    test('should add col classnames without numbers', () => {
+      sizes.forEach(size => {
+        const prop = { [size]: true };
+        const wrapper = mount(<Col {...prop}>Hello</Col>);
+        expect(wrapper.find('div').hasClass(`col-${size}`)).toEqual(true);
+      });
+    });
   });
 
   describe('should render all of the offset sizes', () => {
