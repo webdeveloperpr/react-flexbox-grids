@@ -1,5 +1,5 @@
-import { columnPropType } from './index';
-import { sizes, maxCols } from '../utils/constants';
+import { columnPropType } from './';
+import { sizes, maxCols } from '../constants';
 
 const componentName = 'Col';
 

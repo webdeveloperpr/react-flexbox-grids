@@ -1,6 +1,6 @@
-import Col from './Grid/components/Col/index';
-import Row from './Grid/components/Row/index';
-import Container from './Grid/components/Container/index';
+import Col from './Grid/components/Col';
+import Row from './Grid/components/Row';
+import Container from './Grid/components/Container';
 
 export {
   Col,

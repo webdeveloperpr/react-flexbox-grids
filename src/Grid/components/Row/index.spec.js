@@ -1,4 +1,4 @@
-import { utilityMap } from '../../utils';
+import { utilityMap } from '../../utils/constants';
 import Row from './';
 
 describe('Row is rendered', () => {

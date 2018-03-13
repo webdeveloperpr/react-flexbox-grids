@@ -1,4 +1,3 @@
-import { utilityMap } from '../../utils';
 import Container from './';
 
 describe('Container is rendered', () => {

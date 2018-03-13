@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import filterProps from 'filter-react-dom-props';
-import { utilityPropToClassName } from '../../utils';
+import { utilityPropToClassName } from '../../utils/classNames/index';
 
 const Row = props => {
   const classNames = classnames(

@@ -1,4 +1,4 @@
-import { oneToTwelveRegex } from '../utils/regex';
+import { oneToTwelveRegex } from '../regex';
 
 const rangeError = (
   props,

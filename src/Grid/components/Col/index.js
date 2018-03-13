@@ -2,17 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import filterProps from 'filter-react-dom-props';
-import { columnPropType } from '../../propTypes/index';
-import { createClassNames } from './utils';
-import { utilityPropToClassName } from '../../utils';
+import { columnPropType } from '../../utils/propTypes';
+import { generateColClassNames } from '../../utils/classNames';
 
 const Col = props => {
-  const columnClassNames = createClassNames(props);
-  const utilityClassNames = utilityPropToClassName(props);
-
   const classNames = classnames(
-    columnClassNames,
-    utilityClassNames,
+    generateColClassNames(props),
     props.className
   );
 

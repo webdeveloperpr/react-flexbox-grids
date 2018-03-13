@@ -2,7 +2,7 @@ import {
   oneToTwelveRegex,
   zeroToTwelveRegex,
   uppercaseRegex
-} from './regex';
+} from './index';
 
 describe('oneToTwelveRegex', () => {
   test('should return true on numbers 1-12', () => {
@@ -44,7 +44,7 @@ describe('uppercaseRegex', () => {
   test('should return true when uppercased', () => {
     const result = uppercaseRegex.test('Uppercased');
     expect(result).toBe(true);
-  
+
   });
   test('should return true when uppercased', () => {
     const result = uppercaseRegex.test('lowercased');
