@@ -24,7 +24,7 @@ const config = {
   output: {
     path: DIST_DIR,
     filename: '[name].[chunkhash].js',
-    publicPath: '/'
+    publicPath: 'https://webdeveloperpr.github.io/react-flexbox-grids/'
   },
   module: {
     rules: [
