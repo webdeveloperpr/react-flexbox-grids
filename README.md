@@ -23,7 +23,7 @@ npm i --save react-flexbox-grids
 Add The flexbox-grids css link
 
 ```html
-  https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css">
 ```
 
 ```jsx
