@@ -5,12 +5,12 @@ import filterProps from 'filter-react-dom-props';
 
 const Container = props => {
   const classNames = classnames(
-    'container',
-    { fluid: props.fluid },
+    props.fluid ? 'container-fluid' : 'container',
     props.className
   );
 
   const Element = props.element;
+
   return (
     <Element{...filterProps(props)} className={classNames}>
       {props.children}
