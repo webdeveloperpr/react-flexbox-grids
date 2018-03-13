@@ -1,4 +1,0 @@
-describe('Row', () => {
-  test('classNameProps', () => {
-  });
-});
