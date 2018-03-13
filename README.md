@@ -20,43 +20,29 @@ npm i --save react-flexbox-grids
 
 ## Usage
 
-Add The flexbox-grids css link
+Add The flexbox-grids css stylesheet.
 
 ```html
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.css">
 ```
 
+#### Container
+Add fluid to make the container fluid
+
 ```jsx
-<Container>
-    <Row>
-        <Col xs={12} sm={3} md={4} lg={3}>Col 1</Col>
+<Container fluid>
+    <Row reverse>
+        <Col xs={12} sm={3} md={4} lg={3} xsMiddle>Col 1</Col>
         <Col xs={12} sm={6} md={4} lg={6} }>Col 2</Col>
         <Col xs={12} sm={3} md={4} lg={3} }>Col 3</Col>
     </Row>
 </Container>
 ```
 
+
 ## API
 
-**Container props**
-- fluid
-
-**Col props**
-
-- xs
-- sm
-- md
-- lg
-- xsOffset
-- mdOffset
-- lgOffset
-- xlOffset
-- first
-- last
-- reverse
-
-**Row props**
-
+**(Col, Row)**
 - xsStart
 - xsCenter
 - xsEnd
@@ -99,6 +85,18 @@ Add The flexbox-grids css link
 - lgLast
 - reverse
 
+**Container props**
+- fluid
+
+**Col props**
+- xs
+- sm
+- md
+- lg
+- xsOffset
+- mdOffset
+- lgOffset
+- xlOffset
 
 ## Support
 
