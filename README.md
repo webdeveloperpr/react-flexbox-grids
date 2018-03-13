@@ -27,11 +27,10 @@ Add The flexbox-grids css stylesheet.
 ```
 
 #### Container
-Add fluid to make the container fluid
 
 ```jsx
 <Container fluid>
-    <Row reverse>
+    <Row>
         <Col xs={12} sm={3} md={4} lg={3} xsMiddle>Col 1</Col>
         <Col xs={12} sm={6} md={4} lg={6} }>Col 2</Col>
         <Col xs={12} sm={3} md={4} lg={3} }>Col 3</Col>
