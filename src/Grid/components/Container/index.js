@@ -12,7 +12,10 @@ const Container = props => {
   const Element = props.element;
 
   return (
-    <Element{...filterProps(props)} className={classNames}>
+    <Element
+      {...filterProps(props)}
+      className={classNames}
+    >
       {props.children}
     </Element>
   )
